@@ -1,38 +1,134 @@
-.App {
-  text-align: center;
+html {
+  font-size: 62.5%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.row {
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
+.rotate {
+  transform-origin: center;
+  animation: snowFlake 1s infinite linear;
+}
+
+@keyframes snowFlake {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+
+  100% {
     transform: rotate(360deg);
   }
+}
+
+.header_left {
+  height: 70rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header_left p {
+  font-size: 1.5rem;
+}
+
+.header_left h1 {
+  font-size: 3rem;
+  margin: 1rem 0 0 0;
+  text-transform: capitalize;
+}
+
+.check_now {
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1rem;
+  box-shadow: 10px 10px 11px -2px rgba(0, 0, 0, 0.27);
+  -webkit-box-shadow: 10px 10px 11px -2px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: 10px 10px 11px -2px rgba(0, 0, 0, 0.27);
+}
+
+.header_right {
+  height: 70rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error img {
+  height: 30rem;
+}
+
+footer {
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .header_left {
+    height: auto;
+    margin: 5rem 0 5rem 0;
+  }
+
+  .header_right {
+    height: auto;
+    margin-top: 5rem;
+  }
+}
+
+.city_input {
+  border-radius: 4rem;
+}
+.form_input {
+  outline: 0 !important;
+  border: 0 !important;
+  border-radius: 4rem;
+}
+
+.submit_btn {
+  border-radius: 4rem !important;
+  font-size: 2rem !important;
+}
+
+.information {
+  border-radius: 1rem;
+}
+
+.temp {
+  font-size: 8rem;
+}
+
+.data_hide {
+  visibility: hidden;
+}
+
+.data {
+  flex-direction: column;
+}
+
+.data p {
+  font-size: 4rem;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.details {
+  border-radius: 15px;
 }
